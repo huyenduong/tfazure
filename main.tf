@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
       hostname ="app.terraform.io"
-      organization="cisco-dcn-ecosyste"
+      organization="cisco-dcn-ecosystem"
       workspaces {
         name = "huyeduon-tfazure "
       }
@@ -11,6 +11,7 @@ terraform {
       source = "CiscoDevNet/aci"
       version = "0.5.4"
     }
+  }
 }
 
 provider "aci" {
