@@ -55,8 +55,12 @@ resource "aci_rest" "tfcloud" {
   EOF
 }
 
+data "aci_tenant" "tfcloud" {
+  name  = "tfcloud"
+}
+
 # Add tfvrf1
 resource "aci_vrf" "tfvrf1" {
-  tenant_dn              = aci_tenant.tfcloud.id
+  tenant_dn              = data.aci_tenant.tfcloud.id
   name                   = var.tfvrf1
 }
