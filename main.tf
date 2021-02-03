@@ -30,11 +30,6 @@ provider "azurerm" {
     features {}
 }
 
-resource "azurerm_resource_group" "tfcloudrg" {
-  name     = var.rg_name
-  location = var.azure_location
-}
-
 # Create tenant tfcloud using rest.
 resource "aci_rest" "tfcloud" {
   path       = "/api/node/mo/uni.json"

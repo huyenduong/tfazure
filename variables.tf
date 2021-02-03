@@ -50,7 +50,7 @@ variable "tfctx1" {
   type = string
 }
 
-variable "location" {
+variable "tflocation" {
   type = string
 }
 
