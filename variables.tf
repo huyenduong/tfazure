@@ -50,6 +50,15 @@ variable "tfctx1" {
   type = string
 }
 
+variable "tfvrf2" {
+  type = string
+}
+
+variable "tfctx2" {
+  type = string
+}
+
+
 variable "tflocation" {
   type = string
 }

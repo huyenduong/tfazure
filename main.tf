@@ -59,5 +59,4 @@ resource "aci_rest" "tfcloud" {
 resource "aci_vrf" "tfvrf1" {
   tenant_dn              = aci_tenant.tfcloud.id
   name                   = var.tfvrf1
-  annotation             = var.tfvrf1
 }
