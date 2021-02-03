@@ -1,3 +1,7 @@
+variable "azure_demo03_subs" {
+  type = string
+}
+
 variable "azure_demo04_subs" {
   type = string
 }

@@ -1,11 +1,24 @@
 terraform {
   backend "remote" {
       hostname ="app.terraform.io"
-      organization="huyeduon"
+      organization="cisco-dcn-ecosyste"
       workspaces {
-        name = "tfazure"
+        name = "huyeduon-tfazure "
       }
   }
+  required_providers {
+    aci = {
+      source = "CiscoDevNet/aci"
+      version = "0.5.4"
+    }
+}
+
+provider "aci" {
+  # cisco-aci user name
+  username = var.capic_username
+  password = var.capic_password
+  url      = var.capic_url
+  insecure = true
 }
 
 provider "azurerm" {
