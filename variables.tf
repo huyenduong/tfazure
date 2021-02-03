@@ -21,3 +21,47 @@ variable "rg_name" {
 variable "azure_location" {
   type = string
 }
+
+variable "capic_url" {
+  type = string
+}
+
+variable "capic_username" {
+  type = string
+}
+
+variable "capic_password" {
+  type = string
+}
+
+variable "capic_tenant" {
+  type = string
+}
+
+variable "tfvrf1" {
+  type = string
+}
+
+variable "tfctx1" {
+  type = string
+}
+
+variable "location" {
+  type = string
+}
+
+variable "tfcidr1" {
+  type = string
+}
+
+variable "tfcidr2" {
+  type = string
+}
+
+variable "tfctx1net1" {
+  type = string
+}
+
+variable "tfctx1net2" {
+  type = string
+}

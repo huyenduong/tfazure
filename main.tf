@@ -20,3 +20,28 @@ resource "azurerm_resource_group" "tfcloudrg" {
   name     = var.rg_name
   location = var.azure_location
 }
+
+# Create tenant tfcloud using rest.
+resource "aci_rest" "tfcloud" {
+  path       = "/api/node/mo/uni.json"
+  payload = <<EOF
+  {
+    "fvTenant": {
+        "attributes": {
+            "name": "tfcloud",
+            "status": "created"
+        },
+        "children": [
+            {
+                "fvRsCloudAccount": {
+                    "attributes": {
+                        "tDn": "uni/tn-infra/act-[343fd6f5-2a74-4e53-95e3-d0766750dcc3]-vendor-azure"
+                    },
+                    "children": []
+                }
+            }
+        ]
+    }
+  }
+  EOF
+}
