@@ -54,3 +54,10 @@ resource "aci_rest" "tfcloud" {
   }
   EOF
 }
+
+# Add tfvrf1
+resource "aci_vrf" "tfvrf1" {
+  tenant_dn              = aci_tenant.tfcloud.id
+  name                   = var.tfvrf1
+  annotation             = var.tfvrf1
+}
